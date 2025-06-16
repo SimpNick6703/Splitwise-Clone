@@ -52,8 +52,8 @@ A full-stack expense tracking application built with FastAPI (Python) backend an
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Neurix
+   git clone https://github.com/SimpNick6703/Splitwise-Clone
+   cd Splitwise-Clone
    ```
 
 2. **Start the application**
