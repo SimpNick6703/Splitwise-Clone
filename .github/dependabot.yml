@@ -1,0 +1,116 @@
+# Dependabot configuration for Splitwise Clone
+# Documentation: https://docs.github.com/en/code-security/dependabot
+
+version: 2
+updates:
+  # Enable version updates for Python backend dependencies
+  - package-ecosystem: "pip"
+    directory: "/backend"    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "deps(backend)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "python"
+      - "backend"
+    # Group minor and patch updates together
+    groups:
+      python-backend-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Enable version updates for React frontend dependencies
+  - package-ecosystem: "npm"
+    directory: "/frontend"    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "10:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "deps(frontend)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "frontend"
+      - "react"
+    # Group minor and patch updates together
+    groups:
+      npm-frontend-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    directory: "/backend"    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "11:00"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "docker(backend)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "docker"
+      - "backend"
+
+  # Enable version updates for frontend Docker
+  - package-ecosystem: "docker"
+    directory: "/frontend"    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "12:00"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "docker(frontend)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "docker"
+      - "frontend"
+
+  # Enable version updates for root Docker Compose
+  - package-ecosystem: "docker"
+    directory: "/"    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "13:00"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "@me"
+    assignees:
+      - "@me"
+    commit-message:
+      prefix: "docker(compose)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "docker"
+      - "docker-compose"
