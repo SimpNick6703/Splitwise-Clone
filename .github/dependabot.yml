@@ -5,7 +5,8 @@ version: 2
 updates:
   # Enable version updates for Python backend dependencies
   - package-ecosystem: "pip"
-    directory: "/backend"    schedule:
+    directory: "/backend"
+    schedule:
       interval: "weekly"
       day: "thursday"
       time: "09:00"
@@ -32,7 +33,8 @@ updates:
 
   # Enable version updates for React frontend dependencies
   - package-ecosystem: "npm"
-    directory: "/frontend"    schedule:
+    directory: "/frontend"
+    schedule:
       interval: "weekly"
       day: "thursday"
       time: "10:00"
@@ -60,7 +62,8 @@ updates:
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
-    directory: "/backend"    schedule:
+    directory: "/backend"
+    schedule:
       interval: "weekly"
       day: "thursday"
       time: "11:00"
@@ -79,7 +82,8 @@ updates:
 
   # Enable version updates for frontend Docker
   - package-ecosystem: "docker"
-    directory: "/frontend"    schedule:
+    directory: "/frontend"
+    schedule:
       interval: "weekly"
       day: "thursday"
       time: "12:00"
@@ -98,7 +102,8 @@ updates:
 
   # Enable version updates for root Docker Compose
   - package-ecosystem: "docker"
-    directory: "/"    schedule:
+    directory: "/"
+    schedule:
       interval: "weekly"
       day: "thursday"
       time: "13:00"
