@@ -4,6 +4,8 @@ A full-stack expense tracking application built with FastAPI (Python) backend an
 
 ## Features
 
+![sys_overview](https://github.com/user-attachments/assets/c783ae86-5bc2-49c2-944f-7ffd20c0f227)
+
 ### Core Functionality
 - **User Management**: Create and manage users in the system
 - **Group Management**: Create groups with multiple users
