@@ -1,0 +1,211 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a1a1a; }
+      .layer-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50; }
+      .component-text { font-family: Arial, sans-serif; font-size: 11px; fill: #34495e; }
+      .small-text { font-family: Arial, sans-serif; font-size: 9px; fill: #7f8c8d; }
+      .client-layer { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .network-layer { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .app-layer { fill: #e8f5e8; stroke: #388e3c; stroke-width: 2; }
+      .data-layer { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .infra-layer { fill: #fce4ec; stroke: #c2185b; stroke-width: 2; }
+      .component-box { fill: white; stroke: #2c3e50; stroke-width: 1.5; rx: 5; }
+      .database { fill: #fff8e1; stroke: #ff8f00; stroke-width: 2; }
+      .container { fill: #f5f5f5; stroke: #424242; stroke-width: 1; rx: 3; }
+      .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .data-arrow { stroke: #e74c3c; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="25" text-anchor="middle" class="title">Splitwise Clone - System Architecture Overview</text>
+
+  <!-- Client Layer -->
+  <rect x="50" y="50" width="1100" height="120" class="client-layer" />
+  <text x="70" y="70" class="layer-title">Client Layer (Presentation Tier)</text>
+  
+  <!-- Frontend Components -->
+  <rect x="80" y="85" width="140" height="70" class="component-box" />
+  <text x="150" y="105" text-anchor="middle" class="component-text">React Frontend</text>
+  <text x="150" y="120" text-anchor="middle" class="small-text">Port: 3000</text>
+  <text x="150" y="135" text-anchor="middle" class="small-text">TailwindCSS</text>
+  <text x="150" y="148" text-anchor="middle" class="small-text">Dark/Light Theme</text>
+
+  <!-- UI Components -->
+  <rect x="240" y="85" width="120" height="35" class="component-box" />
+  <text x="300" y="105" text-anchor="middle" class="component-text">UI Components</text>
+  <rect x="240" y="125" width="120" height="30" class="component-box" />
+  <text x="300" y="143" text-anchor="middle" class="small-text">Dashboard, Groups, Users</text>
+
+  <!-- Services -->
+  <rect x="380" y="85" width="120" height="35" class="component-box" />
+  <text x="440" y="105" text-anchor="middle" class="component-text">API Service Layer</text>
+  <rect x="380" y="125" width="120" height="30" class="component-box" />
+  <text x="440" y="143" text-anchor="middle" class="small-text">Axios HTTP Client</text>
+
+  <!-- State Management -->
+  <rect x="520" y="85" width="120" height="35" class="component-box" />
+  <text x="580" y="105" text-anchor="middle" class="component-text">State Management</text>
+  <rect x="520" y="125" width="120" height="30" class="component-box" />
+  <text x="580" y="143" text-anchor="middle" class="small-text">React Context API</text>
+
+  <!-- Router -->
+  <rect x="660" y="85" width="120" height="70" class="component-box" />
+  <text x="720" y="108" text-anchor="middle" class="component-text">React Router</text>
+  <text x="720" y="125" text-anchor="middle" class="small-text">Client-side Routing</text>
+  <text x="720" y="140" text-anchor="middle" class="small-text">SPA Navigation</text>
+
+  <!-- Network Layer -->
+  <rect x="50" y="190" width="1100" height="60" class="network-layer" />
+  <text x="70" y="210" class="layer-title">Network Layer (Communication)</text>
+  
+  <rect x="300" y="220" width="200" height="25" class="component-box" />
+  <text x="400" y="237" text-anchor="middle" class="component-text">HTTP/HTTPS REST API Calls</text>
+  
+  <rect x="520" y="220" width="160" height="25" class="component-box" />
+  <text x="600" y="237" text-anchor="middle" class="component-text">JSON Data Exchange</text>
+
+  <!-- Application Layer -->
+  <rect x="50" y="270" width="1100" height="180" class="app-layer" />
+  <text x="70" y="290" class="layer-title">Application Layer (Business Logic Tier)</text>
+  
+  <!-- FastAPI Backend -->
+  <rect x="80" y="305" width="140" height="50" class="component-box" />
+  <text x="150" y="325" text-anchor="middle" class="component-text">FastAPI Backend</text>
+  <text x="150" y="340" text-anchor="middle" class="small-text">Port: 8000</text>
+  <text x="150" y="352" text-anchor="middle" class="small-text">Python 3.8+</text>
+
+  <!-- API Endpoints -->
+  <rect x="240" y="305" width="280" height="50" class="component-box" />
+  <text x="380" y="318" text-anchor="middle" class="component-text">RESTful API Endpoints</text>
+  <text x="260" y="333" class="small-text">/users/*</text>
+  <text x="260" y="345" class="small-text">/groups/*</text>
+  <text x="380" y="333" class="small-text">/groups/{id}/expenses</text>
+  <text x="380" y="345" class="small-text">/settlements</text>
+
+  <!-- Business Logic Services -->
+  <rect x="80" y="370" width="440" height="70" class="component-box" />
+  <text x="300" y="385" text-anchor="middle" class="component-text">Business Logic Services</text>
+  <text x="120" y="403" class="small-text">• User Management Service</text>
+  <text x="120" y="415" class="small-text">• Group Management Service</text>
+  <text x="120" y="427" class="small-text">• Expense Calculation Engine</text>
+  <text x="320" y="403" class="small-text">• Balance Calculation Service</text>
+  <text x="320" y="415" class="small-text">• Settlement Processing</text>
+  <text x="320" y="427" class="small-text">• Split Algorithm (Equal/Percentage)</text>
+
+  <!-- Data Access Layer -->
+  <rect x="540" y="305" width="200" height="135" class="component-box" />
+  <text x="640" y="325" text-anchor="middle" class="component-text">Data Access Layer</text>
+  <text x="640" y="345" text-anchor="middle" class="small-text">SQLAlchemy ORM</text>
+  <text x="640" y="360" text-anchor="middle" class="small-text">CRUD Operations</text>
+  <text x="640" y="380" text-anchor="middle" class="small-text">Pydantic Validation</text>
+  <text x="640" y="395" text-anchor="middle" class="small-text">Data Serialization</text>
+  <text x="640" y="410" text-anchor="middle" class="small-text">Type Safety</text>
+  <text x="640" y="425" text-anchor="middle" class="small-text">Request/Response Models</text>
+
+  <!-- Swagger Documentation -->
+  <rect x="760" y="305" width="140" height="50" class="component-box" />
+  <text x="830" y="325" text-anchor="middle" class="component-text">API Documentation</text>
+  <text x="830" y="340" text-anchor="middle" class="small-text">Swagger UI</text>
+  <text x="830" y="352" text-anchor="middle" class="small-text">Port: 8000/docs</text>
+
+  <!-- Data Layer -->
+  <rect x="50" y="470" width="700" height="140" class="data-layer" />
+  <text x="70" y="490" class="layer-title">Data Layer (Persistence Tier)</text>
+  
+  <!-- PostgreSQL Database -->
+  <ellipse cx="150" cy="540" rx="80" ry="40" class="database" />
+  <text x="150" y="535" text-anchor="middle" class="component-text">PostgreSQL</text>
+  <text x="150" y="548" text-anchor="middle" class="small-text">Database: splitwise</text>
+
+  <!-- Database Tables -->
+  <rect x="260" y="505" width="460" height="90" class="component-box" />
+  <text x="490" y="520" text-anchor="middle" class="component-text">Database Schema</text>
+  <text x="290" y="540" class="small-text">• users (id, name, email, created_at)</text>
+  <text x="290" y="555" class="small-text">• groups (id, name, description, created_by)</text>
+  <text x="290" y="570" class="small-text">• group_members (group_id, user_id, joined_at)</text>
+  <text x="490" y="540" class="small-text">• expenses (id, group_id, description, amount, paid_by)</text>
+  <text x="490" y="555" class="small-text">• expense_splits (expense_id, user_id, amount, percent)</text>
+  <text x="490" y="570" class="small-text">• settlements (id, group_id, payer_id, payee_id, amount)</text>
+  <text x="490" y="585" text-anchor="middle" class="small-text">Alembic Migrations for Schema Management</text>
+
+  <!-- Infrastructure Layer -->
+  <rect x="770" y="470" width="380" height="140" class="infra-layer" />
+  <text x="790" y="490" class="layer-title">Infrastructure Layer (Deployment)</text>
+  
+  <!-- Docker Compose -->
+  <rect x="790" y="505" width="150" height="40" class="component-box" />
+  <text x="865" y="525" text-anchor="middle" class="component-text">Docker Compose</text>
+  <text x="865" y="538" text-anchor="middle" class="small-text">Multi-container Orchestration</text>
+
+  <!-- Containers -->
+  <rect x="790" y="555" width="100" height="45" class="container" />
+  <text x="840" y="572" text-anchor="middle" class="small-text">Frontend</text>
+  <text x="840" y="585" text-anchor="middle" class="small-text">Node.js + React</text>
+  <text x="840" y="595" text-anchor="middle" class="small-text">Port: 3000</text>
+
+  <rect x="900" y="555" width="100" height="45" class="container" />
+  <text x="950" y="572" text-anchor="middle" class="small-text">Backend</text>
+  <text x="950" y="585" text-anchor="middle" class="small-text">Python + FastAPI</text>
+  <text x="950" y="595" text-anchor="middle" class="small-text">Port: 8000</text>
+
+  <rect x="1010" y="555" width="100" height="45" class="container" />
+  <text x="1060" y="572" text-anchor="middle" class="small-text">Database</text>
+  <text x="1060" y="585" text-anchor="middle" class="small-text">PostgreSQL</text>
+  <text x="1060" y="595" text-anchor="middle" class="small-text">Port: 5432</text>
+
+  <!-- Development Tools -->
+  <rect x="50" y="630" width="1100" height="80" class="infra-layer" />
+  <text x="70" y="650" class="layer-title">Development and Operations Tools</text>
+  
+  <rect x="80" y="665" width="200" height="35" class="component-box" />
+  <text x="180" y="685" text-anchor="middle" class="component-text">Helper Scripts</text>
+  <text x="180" y="695" text-anchor="middle" class="small-text">start.sh, health_check.py, init_sample_data.py</text>
+
+  <rect x="300" y="665" width="150" height="35" class="component-box" />
+  <text x="375" y="685" text-anchor="middle" class="component-text">Version Control</text>
+  <text x="375" y="695" text-anchor="middle" class="small-text">Git Repository</text>
+
+  <rect x="470" y="665" width="180" height="35" class="component-box" />
+  <text x="560" y="685" text-anchor="middle" class="component-text">Environment Management</text>
+  <text x="560" y="695" text-anchor="middle" class="small-text">Docker, Requirements.txt, package.json</text>
+
+  <rect x="670" y="665" width="160" height="35" class="component-box" />
+  <text x="750" y="685" text-anchor="middle" class="component-text">Database Migration</text>
+  <text x="750" y="695" text-anchor="middle" class="small-text">Alembic Schema Versioning</text>
+
+  <!-- Data Flow Arrows -->
+  <!-- Client to Network -->
+  <line x1="440" y1="155" x2="400" y2="190" class="arrow" />
+  
+  <!-- Network to Application -->
+  <line x1="400" y1="250" x2="300" y2="270" class="arrow" />
+  
+  <!-- Application to Data -->
+  <line x1="640" y1="440" x2="500" y2="470" class="data-arrow" />
+  
+  <!-- Infrastructure connections -->
+  <line x1="865" y1="545" x2="950" y2="555" class="arrow" />
+  <line x1="950" y1="555" x2="1060" y2="555" class="arrow" />
+
+  <!-- Key Features Box -->
+  <rect x="920" y="305" width="220" height="135" class="component-box" />
+  <text x="1030" y="325" text-anchor="middle" class="component-text">Key System Features</text>
+  <text x="940" y="345" class="small-text">• Multi-user Group Management</text>
+  <text x="940" y="360" class="small-text">• Equal and Percentage Split Algorithms</text>
+  <text x="940" y="375" class="small-text">• Real-time Balance Calculations</text>
+  <text x="940" y="390" class="small-text">• Settlement and Payment Tracking</text>
+  <text x="940" y="405" class="small-text">• Data Integrity and Validation</text>
+  <text x="940" y="420" class="small-text">• Responsive Design (Mobile/Desktop)</text>
+  <text x="940" y="435" class="small-text">• RESTful API with Documentation</text>
+
+  <!-- Technology Stack Legend -->
+  <rect x="850" y="650" width="290" height="55" class="component-box" />
+  <text x="995" y="670" text-anchor="middle" class="component-text">Technology Stack</text>
+  <text x="870" y="685" class="small-text">Frontend: React 18, TailwindCSS, Axios, React Router</text>
+  <text x="870" y="697" class="small-text">Backend: FastAPI, SQLAlchemy, Pydantic, Alembic</text>
+</svg>
