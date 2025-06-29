@@ -187,10 +187,6 @@
   
   <!-- Application to Data -->
   <line x1="640" y1="440" x2="500" y2="470" class="data-arrow" />
-  
-  <!-- Infrastructure connections -->
-  <line x1="865" y1="545" x2="950" y2="555" class="arrow" />
-  <line x1="950" y1="555" x2="1060" y2="555" class="arrow" />
 
   <!-- Key Features Box -->
   <rect x="920" y="305" width="220" height="135" class="component-box" />
