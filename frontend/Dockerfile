@@ -1,5 +1,5 @@
 # Use specific Node.js version with Alpine for security
-FROM node:24-alpine
+FROM node:25-alpine
 
 RUN apk update && apk upgrade
 
