@@ -1,5 +1,5 @@
 # Use specific Python version with Alpine for security
-FROM python:3.13-alpine
+FROM python:3.14-alpine
 
 RUN apk update && apk upgrade
 
